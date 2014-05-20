@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{083F7184-6D94-4966-A0EC-7D97418324B1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FSCMStrikesBackLogic</RootNamespace>
+    <AssemblyName>FSCMStrikesBackLogic</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FSCMInterfaces, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\FSCMInterfaces\bin\x86\Debug\FSCMInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MonoGame\v3.0\Assemblies\WindowsGL\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Behaviors\BehaviorAbstract.cs" />
+    <Compile Include="Behaviors\BehaviorBasicFire.cs" />
+    <Compile Include="Behaviors\BehaviorBasicNature.cs" />
+    <Compile Include="Behaviors\BehaviorBasicWater.cs" />
+    <Compile Include="Behaviors\BehaviorDefend.cs" />
+    <Compile Include="Behaviors\BehaviorAttack.cs" />
+    <Compile Include="Behaviors\BehaviorDroneBoss.cs" />
+    <Compile Include="Behaviors\BehaviorEmbers.cs" />
+    <Compile Include="Behaviors\BehaviorFlameStorm.cs" />
+    <Compile Include="Behaviors\BehaviorHurricane.cs" />
+    <Compile Include="Behaviors\BehaviorNature.cs" />
+    <Compile Include="Behaviors\BehaviorRSTS.cs" />
+    <Compile Include="Behaviors\BehaviorSmart.cs" />
+    <Compile Include="Behaviors\BehaviorSuperNature.cs" />
+    <Compile Include="Camera.cs" />
+    <Compile Include="Actors\Actor.cs" />
+    <Compile Include="Actors\Character.cs" />
+    <Compile Include="CreateMaze.cs" />
+    <Compile Include="FormationHandler.cs" />
+    <Compile Include="Items\ConsumableAbstract.cs" />
+    <Compile Include="Items\EquipmentAbstract.cs" />
+    <Compile Include="Items\ItemAbstract.cs" />
+    <Compile Include="ItemFactory.cs" />
+    <Compile Include="ItemHandler.cs" />
+    <Compile Include="Items\KeyAbstract.cs" />
+    <Compile Include="MonsterFormation.cs" />
+    <Compile Include="PCBuilder.cs" />
+    <Compile Include="Quest\QuestCollect.cs" />
+    <Compile Include="Quest\QuestCombatTESTING.cs" />
+    <Compile Include="Quest\QuestExplore.cs" />
+    <Compile Include="MessageBox.cs" />
+    <Compile Include="Actors\Monster.cs" />
+    <Compile Include="MonsterFactory.cs" />
+    <Compile Include="Actors\NPC.cs" />
+    <Compile Include="Actors\PC.cs" />
+    <Compile Include="Actors\Prop.cs" />
+    <Compile Include="ContentLoader.cs" />
+    <Compile Include="MapFactory.cs" />
+    <Compile Include="ModelFactory.cs" />
+    <Compile Include="ModelKey.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Quest\QuestAbstract.cs" />
+    <Compile Include="Quest\QuestKill.cs" />
+    <Compile Include="MediaHandler.cs" />
+    <Compile Include="Items\RuneAbstract.cs" />
+    <Compile Include="Spells\SpellNature.cs" />
+    <Compile Include="Spells\SpellAbstract.cs" />
+    <Compile Include="Spells\SpellFire.cs" />
+    <Compile Include="Spells\SpellWater.cs" />
+    <Compile Include="States\StateCombat.cs" />
+    <Compile Include="States\StateAbstract.cs" />
+    <Compile Include="States\StateCredits.cs" />
+    <Compile Include="States\StateEngineLogo.cs" />
+    <Compile Include="StateHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="States\StateTeamLogo.cs" />
+    <Compile Include="States\StateInGame.cs" />
+    <Compile Include="States\StateTitleScreen.cs" />
+    <Compile Include="States\SubStates\SubStateAttackSelect.cs" />
+    <Compile Include="States\SubStates\SubStateCharSelectSpell.cs" />
+    <Compile Include="States\SubStates\SubStateDifficultySelect.cs" />
+    <Compile Include="States\SubStates\SubStateDisplayFormation.cs" />
+    <Compile Include="States\SubStates\SubStateOrderChangeOne.cs" />
+    <Compile Include="States\SubStates\SubStateOrderChangeTwo.cs" />
+    <Compile Include="States\SubStates\SubStateSpellSelect.cs" />
+    <Compile Include="States\SubStates\SubStateAbstract.cs" />
+    <Compile Include="States\SubStates\SubStateCharacterSelectMenu.cs" />
+    <Compile Include="States\SubStates\SubStateCharSelectMenuUse.cs" />
+    <Compile Include="States\SubStates\SubStateCharSelectMenuUseCombat.cs" />
+    <Compile Include="States\SubStates\SubStateCombatMenu.cs" />
+    <Compile Include="States\SubStates\SubStateConfirmExit.cs" />
+    <Compile Include="States\SubStates\SubStateConfirmMenu.cs" />
+    <Compile Include="States\SubStates\SubStateConfirmEquipMenu.cs" />
+    <Compile Include="States\SubStates\SubStateConfirmMessage.cs" />
+    <Compile Include="States\SubStates\SubStateConfirmUseMenu.cs" />
+    <Compile Include="States\SubStates\SubStateConfirmUseMenuCombat.cs" />
+    <Compile Include="States\SubStates\SubStateDisplayMessage.cs" />
+    <Compile Include="States\SubStates\SubStateCharSelectMenuEquip.cs" />
+    <Compile Include="States\SubStates\SubStateFeatureNotImplemented.cs" />
+    <Compile Include="States\SubStates\SubStateFormationMenu.cs" />
+    <Compile Include="States\SubStates\SubStateItemMenuCombat.cs" />
+    <Compile Include="States\SubStates\SubStateRuneChange.cs" />
+    <Compile Include="States\SubStates\SubStateRuneSelect.cs" />
+    <Compile Include="States\SubStates\SubStateSlotMenuEquip.cs" />
+    <Compile Include="States\SubStates\SubStateMessageBox.cs" />
+    <Compile Include="States\SubStates\SubStateOptionsMenu.cs" />
+    <Compile Include="States\SubStates\SubStateCharSelectMenuRune.cs" />
+    <Compile Include="States\SubStates\SubStateListMenuRune.cs" />
+    <Compile Include="States\SubStates\SubStateSlotMenuRune.cs" />
+    <Compile Include="States\SubStates\SubStateStatChange.cs" />
+    <Compile Include="States\SubStates\SubStateStatusMenu.cs" />
+    <Compile Include="States\SubStates\SubStateTitleScreenMenu.cs" />
+    <Compile Include="States\SubStates\SubStateGameMenu.cs" />
+    <Compile Include="States\SubStates\SubStateItemMenu.cs" />
+    <Compile Include="States\SubStates\SubStateMenuAbstract.cs" />
+    <Compile Include="States\SubStates\SubStateListMenuEquip.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\HoneyBadgers.ogg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\FSCMStrikesBackDungeonGenerator\FSCMStrikesBackDungeonGenerator.csproj">
+      <Project>{f81157bd-978d-4ca7-bbfa-d854cc600546}</Project>
+      <Name>FSCMStrikesBackDungeonGenerator</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\creditbgm.ogg" />
+    <None Include="Resources\defend.ogg" />
+    <None Include="Resources\fireSpellDouble.ogg" />
+    <None Include="Resources\fireSpellStrong.ogg" />
+    <None Include="Resources\fireSpellWeak.ogg" />
+    <None Include="Resources\Five_Armies.ogg" />
+    <None Include="Resources\itemSelect.ogg" />
+    <None Include="Resources\magic.ogg" />
+    <None Include="Resources\mazebgm.ogg" />
+    <None Include="Resources\attack.ogg" />
+    <None Include="Resources\menuBack.ogg" />
+    <None Include="Resources\menuMove.ogg" />
+    <None Include="Resources\waterSpell.ogg" />
+    <None Include="Resources\waterSpellStrong.ogg" />
+    <None Include="Resources\welcome.ogg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
